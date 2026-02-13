@@ -156,10 +156,13 @@ nav a.active::after {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    background: white;
-    border: 1px solid var(--bg-soft);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .hero-card:hover {
@@ -167,8 +170,8 @@ nav a.active::after {
     box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
-.hero-card .image-placeholder {
-    height: 300px;
+.hero-card.large {
+    height: 400px;
 }
 
 .overlay {
@@ -178,7 +181,7 @@ nav a.active::after {
     background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 14px;
-    max-width: 80%;
+    max-width: 75%;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
