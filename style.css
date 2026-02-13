@@ -71,7 +71,7 @@ h1, h2, h3 {
 
 header {
     background: white;
-    padding: 25px 40px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
