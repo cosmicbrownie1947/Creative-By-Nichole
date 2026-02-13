@@ -159,7 +159,7 @@ nav a.active::after {
 }
 
 .hero-img {
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
 }
