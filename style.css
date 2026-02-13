@@ -1,5 +1,21 @@
 /* ============================= */
-/* GLOBAL STYLES */
+/* BRAND COLOR SYSTEM */
+/* ============================= */
+
+:root {
+    --bg-main: #F5F4F0;
+    --bg-soft: #E9E3EF;
+    --accent-primary: #9E7BAE;
+    --accent-light: #C8A2C9;
+    --accent-hover: #8DAD95;
+    --highlight-soft: #F7D6DF;
+    --accent-cool: #A0B8DA;
+    --sage-light: #A8BAA2;
+    --text-main: #434248;
+}
+
+/* ============================= */
+/* GLOBAL */
 /* ============================= */
 
 * {
@@ -10,8 +26,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f3f3f3;
-    color: #333;
+    background-color: var(--bg-main);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
@@ -29,7 +45,7 @@ h1, h2, h3 {
 /* ============================= */
 
 .top-bar {
-    background-color: #e91e63;
+    background-color: var(--accent-primary);
     color: white;
     padding: 10px 40px;
     display: flex;
@@ -39,7 +55,7 @@ h1, h2, h3 {
 
 .top-bar .tag {
     background: white;
-    color: #e91e63;
+    color: var(--accent-primary);
     padding: 3px 8px;
     border-radius: 4px;
     margin-right: 10px;
@@ -56,6 +72,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--bg-soft);
 }
 
 .logo h1 {
@@ -64,7 +81,7 @@ header {
 
 .logo p {
     font-size: 14px;
-    color: #777;
+    color: var(--accent-primary);
 }
 
 nav ul {
@@ -76,12 +93,28 @@ nav ul {
 nav a {
     font-size: 14px;
     font-weight: 600;
-    color: #444;
+    color: var(--text-main);
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #e91e63;
+    color: var(--accent-primary);
+}
+
+/* Active Page */
+nav a.active {
+    color: var(--accent-primary);
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-primary);
+    bottom: -5px;
+    left: 0;
 }
 
 /* ============================= */
@@ -97,35 +130,32 @@ nav a:hover {
 
 .hero-card {
     position: relative;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
     background: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--bg-soft);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
 }
 
 .image-placeholder {
-    background: #ddd;
+    background: var(--bg-soft);
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #777;
+    color: var(--accent-primary);
     font-weight: bold;
-}
-
-.hero-card.small .image-placeholder {
-    height: 300px;
 }
 
 .overlay {
     position: absolute;
     bottom: 30px;
     left: 30px;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     max-width: 80%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
 .overlay h2,
@@ -133,23 +163,25 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+/* Buttons */
+
 .btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 8px 18px;
-    background-color: #e91e63;
+    padding: 8px 20px;
+    background-color: var(--accent-primary);
     color: white;
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 13px;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #c2185b;
+    background-color: var(--accent-hover);
 }
 
 /* ============================= */
-/* FAVORITES SECTION */
+/* SERVICES / FAVORITES */
 /* ============================= */
 
 .reader-favorites {
@@ -168,9 +200,10 @@ nav a:hover {
 
 .favorite-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--bg-soft);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 
 .favorite-card .image-placeholder {
@@ -178,7 +211,7 @@ nav a:hover {
 }
 
 .category {
-    background: #e91e63;
+    background: var(--accent-light);
     color: white;
     padding: 8px 12px;
     font-size: 13px;
@@ -187,7 +220,7 @@ nav a:hover {
 }
 
 /* ============================= */
-/* CONTENT SECTION */
+/* MAIN CONTENT */
 /* ============================= */
 
 .content {
@@ -199,10 +232,10 @@ nav a:hover {
 
 .post {
     background: white;
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid var(--bg-soft);
     margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     padding-bottom: 20px;
 }
 
@@ -217,13 +250,13 @@ nav a:hover {
 .post p {
     padding: 10px 20px;
     font-size: 14px;
-    color: #666;
+    color: var(--text-main);
 }
 
 .post-meta {
     padding: 10px 20px;
     font-size: 12px;
-    color: #999;
+    color: var(--accent-primary);
 }
 
 /* ============================= */
@@ -231,11 +264,10 @@ nav a:hover {
 /* ============================= */
 
 .sidebar {
-    background: white;
+    background: var(--bg-soft);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 14px;
     height: fit-content;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .sidebar h3 {
@@ -261,7 +293,7 @@ nav a:hover {
 .page-hero {
     position: relative;
     margin: 40px;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
 }
 
@@ -281,9 +313,10 @@ nav a:hover {
 
 .portfolio-item {
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
+    border: 1px solid var(--bg-soft);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .portfolio-item .image-placeholder {
@@ -298,11 +331,12 @@ nav a:hover {
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 8px;
+    color: var(--accent-primary);
 }
 
 .commentary {
     font-size: 14px;
-    color: #666;
+    color: var(--text-main);
 }
 
 /* ============================= */
@@ -313,13 +347,9 @@ nav a:hover {
     background: white;
     margin: 40px;
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 14px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.cta h2 {
-    margin-bottom: 10px;
+    border: 1px solid var(--bg-soft);
 }
 
 /* ============================= */
@@ -331,8 +361,9 @@ footer {
     padding: 20px;
     text-align: center;
     font-size: 14px;
-    color: #777;
+    color: var(--accent-primary);
     margin-top: 40px;
+    border-top: 1px solid var(--bg-soft);
 }
 
 /* ============================= */
