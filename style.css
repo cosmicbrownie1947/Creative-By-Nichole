@@ -195,6 +195,17 @@ nav a.active::after {
 .overlay h3 {
     margin-bottom: 10px;
 }
+/* IMAGE 2 – full image, no crop */
+
+.hero-card.small {
+    height: auto;
+}
+
+.hero-img-full {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* BUTTONS */
 
