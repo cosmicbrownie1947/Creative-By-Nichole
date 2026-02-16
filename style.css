@@ -156,6 +156,14 @@ nav a.active::after {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
+    background: white;
+}
+
+.hero-img-natural {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .hero-img {
