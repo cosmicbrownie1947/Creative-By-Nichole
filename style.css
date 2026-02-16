@@ -166,47 +166,25 @@ nav a.active::after {
     object-fit: contain;
 }
 
-.hero-img {
-    width: auto;
-    height: auto;
-    display: block;
-}
-
 .hero-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
-.hero-card.large {
-    height: 300px;
-}
-
 .overlay {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 20px;
+    left: 20px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 20px;
+    padding: 18px;
     border-radius: 14px;
-    max-width: 75%;
+    max-width: 85%;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
 }
 
 .overlay h2,
 .overlay h3 {
     margin-bottom: 10px;
-}
-/* IMAGE 2 – full image, no crop */
-
-.hero-card.small {
-    height: auto;
 }
 
 .hero-img-full {
