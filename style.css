@@ -314,6 +314,56 @@ nav a.active::after {
 }
 
 /* ============================= */
+/* CREATIVE FOCUS CARDS */
+/* ============================= */
+
+.section-subtitle {
+    margin-bottom: 20px;
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.favorite-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--bg-soft);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+/* KEEP ALL IMAGES SAME SIZE, NO CROP */
+.favorites-img {
+    width: 100%;
+    height: 140px;            /* matches placeholder size */
+    object-fit: contain;      /* NO zoom, NO crop */
+    background: var(--bg-soft);
+    display: block;
+    padding: 10px;
+}
+
+.category {
+    background: var(--accent-light);
+    color: white;
+    padding: 10px 12px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============================= */
 /* PHOTOGRAPHY PAGE */
 /* ============================= */
 
