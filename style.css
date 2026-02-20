@@ -49,8 +49,9 @@ h1, h2, h3 {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     margin-top: 15px;
+    padding: 20px;          /* NEW: space from edges of the card */
 }
 
 .contact-form label {
@@ -62,7 +63,7 @@ h1, h2, h3 {
 .contact-form select,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;          /* NEW: more inner spacing */
     border-radius: 8px;
     border: 1px solid var(--bg-soft);
     font-family: inherit;
@@ -74,9 +75,9 @@ h1, h2, h3 {
 }
 
 .contact-form button {
-    margin-top: 10px;
-    width: 170px;
-    padding: 10px;
+    margin-top: 12px;
+    width: 180px;           /* slightly wider = better balance */
+    padding: 12px;
     border: none;
     background-color: var(--accent-primary);
     color: white;
