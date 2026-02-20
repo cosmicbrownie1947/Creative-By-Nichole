@@ -428,7 +428,7 @@ nav a.active::after {
 
 .portfolio-img {
     width: 100%;
-    aspect-ratio: 3 / 4;   /* 3:4 ratio */
+    aspect-ratio: 4 / 3;   /* 3:4 ratio */
     object-fit: cover;     /* fills frame, crops edges */
     display: block;
     border-radius: 12px;
