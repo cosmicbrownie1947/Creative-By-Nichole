@@ -422,6 +422,17 @@ nav a.active::after {
 .commentary {
     font-size: 14px;
 }
+/* ============================= */
+/* PORTFOLIO IMAGE RATIO */
+/* ============================= */
+
+.portfolio-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* 3:4 ratio */
+    object-fit: cover;     /* fills frame, crops edges */
+    display: block;
+    border-radius: 12px;
+}
 
 /* ============================= */
 /* CTA */
