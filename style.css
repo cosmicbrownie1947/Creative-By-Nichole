@@ -512,6 +512,13 @@ nav a.active::after {
 /* FOOTER */
 /* ============================= */
 
+.hero-img-natural {
+    width: 100%;
+    height: auto;          /* NO zoom */
+    display: block;
+    object-fit: contain;   /* show full image */
+}
+
 footer {
     background: white;
     padding: 20px;
