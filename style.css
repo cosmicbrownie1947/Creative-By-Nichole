@@ -17,6 +17,17 @@
     --text-main: #434248;
 }
 /* ============================= */
+/* HOMEPAGE POST SPACING */
+/* ============================= */
+
+.post {
+    padding-bottom: 24px; /* adds space below content */
+}
+
+.post .btn {
+    margin-top: 14px;     /* separates button from text */
+}
+/* ============================= */
 /* HOMEPAGE POST IMAGES */
 /* ============================= */
 
